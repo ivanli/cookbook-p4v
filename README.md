@@ -7,11 +7,13 @@ Requirements
 Runs on windows.
 
 #### packages
-- `boxstarter` - p4v needs boxstarter to install chocolatey packages.
+- `chocolatey` - p4v needs chocolatey to install chocolatey packages.
 
 Attributes
 ----------
-None.
+````
+default['p4v']['package_version']
+````
 
 Usage
 -----

@@ -7,15 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'boxstarter::default'
+include_recipe 'chocolatey'
 
-boxstarter "boxstarter run" do
-
-  # retries 3
-  password node['login_password']
-  disable_reboots false
-
-  code <<-EOH
-    choco install p4v -y
-  EOH
+chocolatey 'p4v' do
+  version node['p4v']['package_version']
 end
